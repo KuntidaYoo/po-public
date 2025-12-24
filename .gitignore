@@ -1,13 +1,9 @@
-# Excel temp/lock files
+# Ignore all Excel files by default
+*.xlsx
 ~$*.xlsx
-~$*.xls
-*.tmp
-*.bak
 
-# Your uploaded input files (optional)
-update_yuan.xlsx
-A0029.xlsx
-รายงานข้อมูลผู้จำหน่าย.xlsx
+# BUT keep the public template
+!ตัวอย่างใบสั่งซื้อต่างประเทศ.xlsx
 
 # Output folders (optional)
 output_buyers/
