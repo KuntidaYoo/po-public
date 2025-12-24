@@ -1,11 +1,27 @@
-update_yuan.xlsx
-A0029.xlsx
-output_buyers/
-output_PO/
-buyer_*.xlsx
-PO_*.xlsx
-temp/
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 .venv/
+venv/
 .env
+
+# Streamlit
+.streamlit/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Outputs
+output_buyers/
+output_PO/
+
+# User uploads
+update_yuan.xlsx
+A0029.xlsx
