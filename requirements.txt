@@ -1,0 +1,9 @@
+pandas
+numpy
+openpyxl
+xlsxwriter
+pillow
+streamlit
+python-dateutil
+tzdata
+

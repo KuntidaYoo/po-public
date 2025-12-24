@@ -1,0 +1,11 @@
+update_yuan.xlsx
+A0029.xlsx
+output_buyers/
+output_PO/
+buyer_*.xlsx
+PO_*.xlsx
+temp/
+__pycache__/
+*.pyc
+.venv/
+.env
