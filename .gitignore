@@ -1,27 +1,23 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.venv/
-venv/
-.env
+# Sensitive input files
+update_yuan.xlsx
+A0029.xlsx
+รายงานข้อมูลผู้จำหน่าย.xlsx
 
-# Streamlit
-.streamlit/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# IDE
-.idea/
-.vscode/
+# Excel temp / lock files
+~$*.xlsx
 
 # Outputs
 output_buyers/
 output_PO/
 
-# User uploads
-update_yuan.xlsx
-A0029.xlsx
+# Python
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
