@@ -1,12 +1,14 @@
-# Sensitive input files
+# Excel temp/lock files
+~$*.xlsx
+~$*.xls
+*.tmp
+*.bak
+
+# Your uploaded input files (optional)
 update_yuan.xlsx
 A0029.xlsx
-รายงานข้อมูลผู้จำหน่าย.xlsx
 
-# Excel temp / lock files
-~$*.xlsx
-
-# Outputs
+# Output folders (optional)
 output_buyers/
 output_PO/
 
@@ -21,3 +23,4 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
