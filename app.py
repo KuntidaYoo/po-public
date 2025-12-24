@@ -17,6 +17,8 @@ st.write("อัปโหลดไฟล์จาก Express และ ราย
 
 uploaded_update = st.file_uploader("Upload file from EXPRESS (.xlsx)", type=["xlsx"])
 uploaded_a0029 = st.file_uploader("Upload รายละเอียดสินค้า （.xlsx)", type=["xlsx"])
+uploaded_vendor_info = st.file_uploader("Upload รายงานข้อมูลผู้จำหน่าย.xlsx (vendor info)", type=["xlsx"])
+
 
 vendor = st.text_input("Supplier code", value="A0029")
 po_date = st.date_input("PO date", value=datetime.date.today())
@@ -28,6 +30,9 @@ if st.button("Generate PO"):
         st.stop()
     if uploaded_a0029 is None:
         st.error("Please upload A0029.xlsx")
+        st.stop()
+    if uploaded_vendor_info is None:
+        st.error("Please upload รายงานข้อมูลผู้จำหน่าย.xlsx")
         st.stop()
     if not vendor.strip():
         st.error("Please enter a vendor code.")
@@ -47,6 +52,10 @@ if st.button("Generate PO"):
         update_path = work_dir / "update_yuan.xlsx"
         a0029_path = work_dir / "A0029.xlsx"
 
+        vendor_info_path = work_dir / "รายงานข้อมูลผู้จำหน่าย.xlsx"
+        vendor_info_path.write_bytes(uploaded_vendor_info.getbuffer())
+
+
         update_path.write_bytes(uploaded_update.getbuffer())
         a0029_path.write_bytes(uploaded_a0029.getbuffer())
 
@@ -61,7 +70,8 @@ if st.button("Generate PO"):
 
         # vendor info (optional)
         if VENDOR_INFO_PATH.exists():
-            m.VENDOR_INFO_XLSX = str(VENDOR_INFO_PATH)
+            # vendor info (uploaded)
+            m.VENDOR_INFO_XLSX = str(vendor_info_path)
 
         st.info("Parsing update_yuan.xlsx and building buyer files...")
         m.main()  # your split function
