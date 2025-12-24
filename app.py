@@ -22,7 +22,7 @@ st.title("DONMARK Purchase Order Generator")
 st.write("อัปโหลดไฟล์จาก Express + รายละเอียดสินค้า + ข้อมูลผู้จำหน่าย แล้วเลือก Supplier เพื่อสร้าง PO")
 
 # --- Uploads ---
-uploaded_update = st.file_uploader("1) Upload file from EXPRESS (update_yuan.xlsx)", type=["xlsx"])
+uploaded_update = st.file_uploader("1) Upload file from EXPRESS", type=["xlsx"])
 uploaded_a0029 = st.file_uploader("2) Upload รายละเอียดสินค้า (A0029.xlsx)", type=["xlsx"])
 uploaded_vendor_info = st.file_uploader("3) Upload รายงานข้อมูลผู้จำหน่าย.xlsx (Vendor info)", type=["xlsx"])
 
